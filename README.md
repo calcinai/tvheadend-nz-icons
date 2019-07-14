@@ -13,7 +13,7 @@ Clone this repository somewhere on the TVheadend server (it's a good idea to add
 
     git clone git@github.com:calcinai/tvheadend-nz-icons.git --recurse-submodules --shallow-submodules --depth=1
     
-Configure TVheadend to look in the icons directoy for the symlinks by setting the channel icon path to something like `file:///home/hts/tvheadend-nz-icons/icons/%c`
+Configure TVheadend to look in the icons directoy for the symlinks by setting the channel icon path to something like `file:///home/hts/tvheadend-nz-icons/icons/%c`, and the channel icon name scheme to `All lower-case`
 
 
 ### Acknowledgments

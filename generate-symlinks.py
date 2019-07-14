@@ -14,7 +14,7 @@ for type in mapping.getroot().findall('*'):
         for item in channel.findall('Item'):
 
             source_filename = '../' + input_dir + '/' + type.tag + '/Simple200/' + channel.find('File').text
-            dest_filename = output_dir + '/' + item.attrib['Name']
+            dest_filename = output_dir + '/' + item.attrib['Name'].lower()
             if os.path.islink(dest_filename):
                 os.remove(dest_filename)
 
