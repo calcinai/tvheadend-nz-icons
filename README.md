@@ -11,7 +11,7 @@ The submodule is [Jasmeet181/mediaportal-nz-logos](https://github.com/Jasmeet181
 
 Clone this repository somewhere on the TVheadend server (it's a good idea to add `--depth=1` due to the images changing)
 
-    git clone git@github.com:calcinai/tvheadend-nz-icons.git --depth=1
+    git clone git://github.com/calcinai/tvheadend-nz-icons.git --depth=1
     
 Configure TVheadend to look in the icons directoy for the symlinks by setting the channel icon path to something like `file:///home/hts/tvheadend-nz-icons/icons/%c`
 
