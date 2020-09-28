@@ -18,7 +18,7 @@ for type in mapping.getroot().findall('*'):
         for item in channel.findall('Item'):
 
             # Light
-            source_filename = '../' + input_dir + '/' + type.tag + '/.Light/' + channel.find('File').text
+            source_filename = '../../' + input_dir + '/' + type.tag + '/.Light/' + channel.find('File').text
             dest_filename = output_dir_light + '/' + item.attrib['Name'].lower()
             if os.path.islink(dest_filename):
                 os.remove(dest_filename)
@@ -26,7 +26,7 @@ for type in mapping.getroot().findall('*'):
             os.symlink(source_filename, dest_filename)
 
             # Dark
-            source_filename = '../' + input_dir + '/' + type.tag + '/.Dark/' + channel.find('File').text
+            source_filename = '../../' + input_dir + '/' + type.tag + '/.Dark/' + channel.find('File').text
             dest_filename = output_dir_dark + '/' + item.attrib['Name'].lower()
             if os.path.islink(dest_filename):
                 os.remove(dest_filename)
