@@ -27,7 +27,7 @@ for type in mapping.getroot().findall('*'):
 
             # Light - Actual filename
             source_filename = '../../' + input_dir + '/' + type.tag + '/.Light/' + channel.find('File').text
-            dest_filename = output_dir_light + '/' + channel.find('File').text.rstrip('.png').lower()
+            dest_filename = output_dir_light + '/' + os.path.splitext(channel.find('File').text)[0].lower()
             if os.path.islink(dest_filename):
                 os.remove(dest_filename)
 
@@ -44,7 +44,7 @@ for type in mapping.getroot().findall('*'):
 
             # Dark - Actual filename
             source_filename = '../../' + input_dir + '/' + type.tag + '/.Dark/' + channel.find('File').text
-            dest_filename = output_dir_dark + '/' + channel.find('File').text.rstrip('.png').lower()
+            dest_filename = output_dir_dark + '/' + os.path.splitext(channel.find('File').text)[0].lower()
             if os.path.islink(dest_filename):
                 os.remove(dest_filename)
 
